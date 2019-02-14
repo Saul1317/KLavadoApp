@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "635139991733",
+    "firebase_url": "https://klavadoapp-a2857.firebaseio.com",
+    "project_id": "klavadoapp-a2857",
+    "storage_bucket": "klavadoapp-a2857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635139991733:android:bc51be4897fca4e3",
+        "android_client_info": {
+          "package_name": "com.example.sauldelgado.klavadoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635139991733-fe93jh4nqqombu25uc3c7i2furdpl1gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sauldelgado.klavadoapp",
+            "certificate_hash": "11cea55fe8f12158b97304bf6d09c056af16749a"
+          }
+        },
+        {
+          "client_id": "635139991733-0js4o85rq9cj5kr4ap5nuco23h4lb0oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU-vKolTlx10ynkUFHn8yCYVUL2uSyBDs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635139991733-0js4o85rq9cj5kr4ap5nuco23h4lb0oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

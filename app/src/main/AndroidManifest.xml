@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.sauldelgado.klavadoapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Lavado 911"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+         See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icono_911_aplicacion" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service android:name=".Firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Facturacion.View.FacturacionViewImpl"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name=".Splash.View.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/pantalla_completa">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu.View.MenuPrincipal"
+            android:theme="@style/pantalla_menu_principal"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name=".Services.View.Servicio"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".Extras.View.Extras"
+            android:theme="@style/pantalla_completa"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Cita.View.Cita"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".DatosPersonales.View.DatosPersonales"
+            android:theme="@style/pantalla_completa"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Pago.View.Activity.Pago"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name=".Finalizado.View.FinalizacionServicio"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".Registrar.View.Registrarse"
+            android:label="@string/title_activity_registrarse"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".TipoServicio.View.TipoServicio"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".TipoVehiculo.View.TipoVehiculo"
+            android:theme="@style/pantalla_completa" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Ubicacion.View.Ubicacion"
+            android:label="@string/app_name"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".Terminos.View.Terminos"
+            android:theme="@style/pantalla_completa" />
+        <activity android:name=".Paypal.View.PaypalExpress" />
+        <activity
+            android:name=".TipoLavado.View.Activity.TipoLavado"
+            android:label="@string/title_activity_tipo_lavado"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".CostosLavados.View.CostoLavado"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name=".LugaresDisponible.View.LugaresDisponibles"
+            android:theme="@style/pantalla_completa" />
+
+    </application>
+
+</manifest>

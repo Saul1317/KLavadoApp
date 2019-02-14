@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Klavado</item>
+        <item name="colorPrimaryDark">@color/Klavado</item>
+        <item name="colorAccent">@color/Klavado</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="pantalla_completa" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <style name="pantalla_menu_principal" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/Klavado</item>
+        <item name="colorPrimaryDark">@color/Klavado</item>
+        <item name="colorAccent">@color/Klavado</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="boton_menu_KLavado" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/Klavado</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="checkBoxKLavado" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/Klavado</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+    </style>
+
+    <style name="checkBoxKLavado2" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/primary_text</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/gradient_spinner</item>
+    </style>
+
+    <style name="dialog_advertencia_boton">
+        <item name="colorButtonNormal">@color/Klavado</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+    </style>
+
+    <style name="switch_tipo_lavado" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#000</item>
+        <item name="colorSwitchThumbNormal">#fff</item>
+        <item name="android:colorForeground">#fff</item>
+    </style>
+
+</resources>

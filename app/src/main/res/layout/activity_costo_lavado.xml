@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CostosLavados.View.CostoLavado">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo_costos_menu"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Klavado">
+
+            <ImageView
+                android:id="@+id/btn_back_costo_lavado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_keyboard_arrow_left" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/lavado911" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titulo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipos de "
+                android:textSize="40sp"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/titulo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Lavados"
+                android:textSize="35dp"
+                android:textColor="@color/Klavado"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/lavado_ecologico_costo"
+                android:layout_width="260dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="@color/Klavado_ecologico"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:background="@android:color/white">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lavado ecologico"
+                            android:textStyle="bold"
+                            android:textColor="@color/Klavado_ecologico"
+                            android:textSize="25sp"/>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:columnCount="2"
+                        app:useDefaultMargins="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:text="Exterior"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_primario"
+                            app:layout_columnSpan="1"
+                            app:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Exterior e interior"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/txt_size_primario"
+                            app:layout_columnSpan="1"
+                            app:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/lavado_ecologico_precio_basico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$50"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="25sp"
+                            app:layout_columnSpan="1"
+                            app:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/lavado_ecologico_precio_completo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$70"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="25sp"
+                            app:layout_columnSpan="1"
+                            app:layout_gravity="center_horizontal"/>
+
+                    </android.support.v7.widget.GridLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/lavado_premium_costo"
+                android:layout_width="290dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="@color/primary_text"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:background="@color/Klavado_premium">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lavado premium"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_text"
+                                android:textSize="25sp"/>
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:columnCount="2"
+                            app:useDefaultMargins="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:text="Exterior"
+                                android:textStyle="bold"
+                                android:textColor="@color/Klavado_premium"
+                                android:textSize="@dimen/txt_size_primario"
+                                app:layout_columnSpan="1"
+                                app:layout_gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exterior e interior"
+                                android:textStyle="bold"
+                                android:textColor="@color/Klavado_premium"
+                                android:textSize="@dimen/txt_size_primario"
+                                app:layout_columnSpan="1"
+                                app:layout_gravity="center_horizontal"/>
+
+                            <TextView
+                                android:id="@+id/lavado_premium_precio_basico"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$50"
+                                android:textStyle="bold"
+                                android:textColor="@color/Klavado_premium"
+                                android:textSize="25sp"
+                                app:layout_columnSpan="1"
+                                app:layout_gravity="center_horizontal"/>
+
+                            <TextView
+                                android:id="@+id/lavado_premium_precio_completo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$70"
+                                android:textStyle="bold"
+                                android:textColor="@color/Klavado_premium"
+                                android:textSize="25sp"
+                                app:layout_columnSpan="1"
+                                app:layout_gravity="center_horizontal"/>
+
+                        </android.support.v7.widget.GridLayout>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/certificate"
+                        android:layout_gravity="bottom|end"/>
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

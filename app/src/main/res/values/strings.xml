@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">KLavadoApp</string>
+    <string name="peticion_express">Petición express</string>
+    <string name="iniciar_sesion">Usuario registrado</string>
+    <string name="Registrarse">Registarse</string>
+    <string name="KLavado">KLavado</string>
+    <string name="txt_vehiculo">Vehículo</string>
+    <string name="txt_minivan">Minivan</string>
+    <string name="txt_camioneta">Camioneta</string>
+    <string name="txt_compact_suv">Suv</string>
+    <string name="txt_auto">Auto</string>
+    <string name="txt_servicio">Servicios</string>
+    <string name="txt_solo_exteriores">Solo exterior</string>
+    <string name="carcteristicas">-Caracteristica prueba</string>
+    <string name="txt_costo_total">Costo $</string>
+    <string name="txt_completo">Completo</string>
+    <string name="txt_avanzado">Avanzado</string>
+    <string name="txt_delux">Delux</string>
+    <string name="txt_extras">Extras</string>
+    <string name="txt_continuar">Continuar</string>
+    <string name="txt_pago">Pago</string>
+    <string name="txt_pagar">Pagar servicio</string>
+    <string name="txt_datos_personales">Datos personales</string>
+    <string name="txt_hint_nombre">Ingresa tu nombre*</string>
+    <string name="txt_hint_colonia">Ingresa tu colonia*</string>
+    <string name="txt_hint_calle">Ingresa tu calle*</string>
+    <string name="txt_numero_calle">#</string>
+    <string name="txt_hint_celular">Ingresa tu celular*</string>
+    <string name="txt_comentario">¿Cómo identificamos tu auto?</string>
+    <string name="txt_monto_total">Monto total</string>
+    <string name="txt_monto_total_prueba">$100</string>
+    <string name="txt_tarjeta">Tarjeta</string>
+    <string name="txt_efectivo">Efectivo</string>
+    <string name="txt_programacion">Programación</string>
+    <string name="txt_programacion_descripcion">Ingresa una fecha y un rango de hora en el que quieras que vayamos</string>
+    <string name="txt_hint_fecha">Ingresa una fecha</string>
+    <string name="txt_calendario">Calendario</string>
+    <string name="txt_hint_hora_inicio">Ingresa una hora de inicio</string>
+    <string name="txt_hint_hora_final">Ingresa una hora final</string>
+    <string name="txt_hora">Hora</string>
+    <string name="txt_descripcion_efectivo">Este es un texto de prueba para que los usuarios sepan que si se puede hacer pagos en efectivo pero que deben estar concientes de que si no se paga primero no se realizara ningun trabajo</string>
+    <string name="txt_hint_tarjeta_credito">Número de tu tarjeta</string>
+    <string name="txt_hint_nombre_apellido">Ingresa tu nombre y apellido</string>
+    <string name="txt_fecha_vencimiento">Fecha de vencimiento</string>
+    <string name="txt_fecha_caducidad">MM/AA</string>
+    <string name="txt_codigo_seguridad">código de seguridad</string>
+    <string name="txt_tipo_tarjetas">Tipo de tarjetas</string>
+    <string name="txt_cvv">CVV</string>
+    <string name="txt_niveles_aire">Nivel de aire en llantas</string>
+    <string name="txt_gratis">Gratis</string>
+    <string name="txt_niveles_liquido">Revisión niveles de liquidos</string>
+    <string name="txt_shampoo">Shampoo con cera</string>
+    <string name="txt_limpieza_tapiceria">Limpieza de tapiceria</string>
+    <string name="txt_pulido_encerado">Pulido y encerado</string>
+    <string name="txt_precio_prueba">$250</string>
+    <string name="txt_extras_descripcion">Da click en el texto para ver la descripción del servicio</string>
+    <string name="txt_login_usuario">Ingresa tu usuario</string>
+    <string name="txt_login_password">Ingresa tu contraseña</string>
+    <string name="txt_login_ingresar">Ingresar</string>
+    <string name="dialog_title_ejemplo">Niveles de aire de llantas</string>
+    <string name="dialog_content_ejemplo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris leo justo, interdum et tempor eu, mattis sit amet nibh. Ut placerat nibh est, vulputate accumsan enim venenatis vel. Aenean ultricies aliquet massa, at ultrices purus. Donec pellentesque tempor congue. Maecenas nec gravida nulla. Donec at bibendum purus, ac lacinia metus. Pellentesque non iaculis lacus.</string>
+    <string name="dialog_price_ejemplo">Gratis</string>
+    <string name="advertencia">Por su seguridad y la nuestra no preste las llaves al empleado</string>
+    <string name="txt_premium">Premium</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_registrarse">Registrarse</string>
+    <string name="txt_costo_total_inicial">0.0</string>
+    <string name="button_aceptar">Aceptar</string>
+    <string name="button_cancelar">Cancelar</string>
+    <string name="txt_registro">Registro</string>
+    <string name="txt_tipo_servicio">Tipo de servicio</string>
+    <string name="txt_solicitar_servicio">Solicitar servicio</string>
+    <string name="txt_login">Login</string>
+    <string name="title_activity_ubicacion">Map</string>
+    <string name="marker_detail_latlng">(%1$.2f, %2$.2f)</string>
+    <string name="edt_direccion_buscar">Dirección, Ciudad o país</string>
+    <string name="txt_terminos_condiciones1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae justo orci. Etiam et turpis vel diam pulvinar vestibulum. Etiam maximus commodo est. Vestibulum dignissim turpis ut nisi lobortis posuere. Nam mauris mauris, suscipit a sapien non, dapibus eleifend orci. \n \n Sed nunc sem, ornare sit amet vulputate ut, aliquam id purus. In hac habitasse platea dictumst. Ut turpis felis, elementum vitae massa viverra, blandit malesuada metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc eget vulputate neque. Aliquam at ultricies quam. Fusce ex odio, dictum a tellus quis, dignissim maximus odio. \n \n  In rutrum bibendum lacus, eu gravida libero tincidunt congue. Fusce sit amet enim hendrerit, varius enim non, hendrerit mi. Curabitur suscipit sem dui, non varius magna dignissim in. Aenean sed eros cursus, consectetur risus in, congue sapien. Fusce sed nunc vel magna rutrum rutrum. Integer euismod suscipit mi, sed fermentum lectus congue eget. In rhoncus ligula id egestas varius. Morbi rhoncus odio ac tortor porttitor, ut venenatis metus tincidunt.</string>
+    <string name="txt_terminos_condiciones2">Vestibulum dignissim turpis ut nisi lobortis posuere. Nam mauris mauris, suscipit a sapien non, dapibus eleifend orci. Sed nunc sem, ornare sit amet vulputate ut, aliquam id purus. In hac habitasse platea dictumst. Ut turpis felis, elementum vitae massa viverra, blandit malesuada metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc eget vulputate neque. Aliquam at ultricies quam. Fusce ex odio, dictum a tellus quis, dignissim maximus odio. \n \n  In rutrum bibendum lacus, eu gravida libero tincidunt congue. Fusce sit amet enim hendrerit, varius enim non, hendrerit mi. Curabitur suscipit sem dui, non varius magna dignissim in. Aenean sed eros cursus, consectetur risus in, congue sapien. Fusce sed nunc vel magna rutrum rutrum. Integer euismod suscipit mi, sed fermentum lectus congue eget. In rhoncus ligula id egestas varius. Morbi rhoncus odio ac tortor porttitor, ut venenatis metus tincidunt.</string>
+    <string name="txt_terminos_condiciones3">Nam euismod nibh at ornare imperdiet. Praesent porttitor, est eget eleifend convallis, elit nunc congue purus, vel convallis elit libero vitae leo. Sed tincidunt interdum sem, eget rhoncus urna imperdiet quis. Etiam malesuada nibh pellentesque, elementum ipsum eget, pellentesque metus. Proin facilisis nulla arcu, ac finibus nunc pulvinar sit amet. Aenean vehicula nisl sit amet velit facilisis convallis. Curabitur quis mollis ligula, et vestibulum dui. Nullam malesuada egestas scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet enim ut sapien bibendum pulvinar at id urna. Duis finibus eu ex sit amet gravida. Morbi nec scelerisque dui, vel interdum elit. Duis suscipit odio sed lorem porta laoreet.</string>
+    <string name="txt_vehiculo_modelo">Modelo del vehículo*</string>
+    <string name="txt_vehiculo_color">Color del Vehículo*</string>
+    <string name="txt_hidrolavado_descripcion">Nuestro exclusivo shampoo importado cuida al máximo la pintura y la deja brillante, hermosa ya que contiene cera natural, cera sintética y cera carnauba</string>
+    <string name="txt_ecologia_descripcion">Usamos productos 100% biodegradables, es ideal para autos moderadamente sucios</string>
+    <string-array name="cfdi_array">
+        <item>G01 - ADQUISICIÓN DE MERCANCIAS</item>
+        <item>G03 - GASTOS EN GENERAL</item>
+        <item>I01 - CONSTRUCCIONES</item>
+        <item>I02 - MOBILIARIO Y EQUIPO DE OFICINA POR INVERSIONES</item>
+        <item>I04 - EQUIPO DE COMPUTO Y ACCESORIOS</item>
+        <item>I08 - OTRA MAQUINARIA Y EQUIPO</item>
+        <item>P01 - POR DEFINIR</item>
+    </string-array>
+    <string name="title_activity_tipo_lavado">TipoLavado</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_hint_correo">Ingresa tu correo</string>
+    <string name="default_notification_channel_id">"com.example.sauldelgado.klavadoapp"</string>
+</resources>

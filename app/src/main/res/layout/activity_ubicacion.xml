@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Ubicacion.View.Ubicacion" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Klavado">
+                <ImageView
+                    android:id="@+id/btn_back_ubicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_keyboard_arrow_left"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/lavado911"/>
+            </FrameLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/facebook_placeholder_for_locate_places_on_maps"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edt_search_direccion"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:hint="@string/edt_direccion_buscar"
+                        android:textSize="@dimen/txt_size_secundario"
+                        android:textColor="@color/secondary_text"
+                        android:inputType="textPostalAddress"
+                        android:background="@drawable/edt_buscador_direccion"
+                        android:imeOptions="actionSearch"/>
+
+                    <ImageView
+                        android:id="@+id/btn_clear_texto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:padding="10dp"
+                        android:src="@drawable/close_button"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/fab_search_location"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_redondo_ubicacion"
+                android:backgroundTint="@android:color/white"
+                android:padding="8dp"
+                android:elevation="8dp"
+                android:layout_gravity="end"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/searching_magnifying_glass" />
+
+            <ImageView
+                android:id="@+id/fab_getLocalizacion"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_redondo_ubicacion"
+                android:backgroundTint="@android:color/white"
+                android:padding="8dp"
+                android:elevation="8dp"
+                android:layout_gravity="end"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/gps_fixed_indicator" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <!--
+        <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_getLocalizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="10dp"
+        app:elevation="6dp"
+        app:backgroundTint="@android:color/white"
+        app:srcCompat="@drawable/ic_gps_fixed"/>
+        -->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="4dp"
+            app:backgroundTint="@color/Klavado"
+            app:srcCompat="@drawable/ic_send"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview_direccion_actual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="1"
+            android:visibility="visible"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Direccion"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_size_primario"
+                    android:textColor="@color/Klavado"/>
+
+                <TextView
+                    android:id="@+id/txt_direccion_GPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_size_secundario"
+                    android:textColor="@color/secondary_text"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_ubicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</FrameLayout>
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pago.View.Activity.Pago">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Klavado">
+            <ImageView
+                android:id="@+id/btn_back_pago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_keyboard_arrow_left"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_icono_lavado_911"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/ventanas_padding"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="@string/txt_pago"
+                android:textColor="@color/Klavado"
+                android:textSize="@dimen/titulo_txt_size"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/monto_total_margin_bottom"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/txt_monto_total"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/txt_size_primario"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_pago_total_final"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_monto_total_prueba"
+                    android:textColor="@color/Klavado"
+                    android:textSize="@dimen/txt_size_primario"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/radio_group_tipo_pago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/monto_total_margin_bottom"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_tarjeta"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/txt_size_primario"
+                    android:textStyle="bold" />
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radio_tarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/radio_button_margin"
+                    android:layout_marginLeft="@dimen/radio_button_margin"
+                    android:checked="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_efectivo"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/txt_size_primario"
+                    android:textStyle="bold" />
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radio_efectivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/radio_button_margin"
+                    android:layout_marginLeft="@dimen/radio_button_margin"/>
+            </RadioGroup>
+            <FrameLayout
+                android:id="@+id/fragmentContenido"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

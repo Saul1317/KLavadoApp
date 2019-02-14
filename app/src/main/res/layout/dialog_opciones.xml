@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="¿Cuál es tu favorito?"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/txt_size_primario"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group_aromatizante"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/aromatizante_briza_limpio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Briza limpio"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/txt_size_secundario" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/aromatizante_uva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uva"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/txt_size_secundario"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/aromatizante_carolina_herrera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo Carolina Herrera"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/txt_size_secundario"
+                app:layout_columnSpan="1"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/aromatizante_ck_eternity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo ck Eternity"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/txt_size_secundario"
+                app:layout_columnSpan="1"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_aromatizante_btn_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/button_cancelar"
+            android:backgroundTint="@color/Klavado"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/dialog_aromatizante_btn_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/button_aceptar"
+            android:backgroundTint="@color/Klavado"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</LinearLayout>

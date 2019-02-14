@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Paypal.View.PaypalExpress">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/cargo_total_prueba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/Klavado"
+            android:hint="Cargo total a pagar"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/boton_pagar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button"
+            android:layout_gravity="bottom"
+            android:text="Pay to win"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_primario"
+            android:backgroundTint="@color/Klavado"/>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

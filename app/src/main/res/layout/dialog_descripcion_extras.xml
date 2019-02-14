@@ -1,0 +1,36 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/Klavado"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="@string/dialog_title_ejemplo"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/txt_size_primario" />
+    <TextView
+        android:id="@+id/dialog_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/dialog_content_ejemplo"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_size_secundario" />
+    <TextView
+        android:id="@+id/dialog_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/dialog_price_ejemplo"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_size_primario"/>
+</LinearLayout>

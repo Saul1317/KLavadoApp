@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    cardview:cardBackgroundColor="@android:color/white"
+    cardview:cardCornerRadius="16dp"
+    cardview:cardElevation="3dp">
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/ventanas_padding"
+        cardview:useDefaultMargins="true"
+        cardview:columnCount="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Por su seguridad y la nuestra"
+            android:textSize="20sp"
+            android:textColor="@color/Klavado"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            cardview:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No pedimos las llaves de su auto, NUNCA"
+            android:textSize="@dimen/txt_size_secundario"
+            android:textAlignment="center"
+            cardview:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No informe sus datos generales o de contacto a nuestros colaboradores, toda comunicación se debe hacer por nuestras app y telefono oficiales"
+            android:textSize="@dimen/txt_size_secundario"
+            android:textAlignment="center"
+            cardview:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Por favor no deje articulos de valor dentro del vehículo, no nos hacemos responsables por ellos"
+            android:textSize="@dimen/txt_size_secundario"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/diaglo_advertencia_contenido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agradecemos su ayuda para conservar servicios seguros, cualquier anomalidad estamos para escucharlo en el numero 3317656533 o en nuestra pagina web www.lavado911.com/servicioseguro"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            cardview:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/diaglo_seguridad_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="35dp"
+            android:text="Entendido"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_secundario"
+            android:textColor="@android:color/white"
+            android:background="@drawable/dialog_button_advertencia"
+            android:theme="@style/dialog_advertencia_boton"/>
+    </android.support.v7.widget.GridLayout>
+
+</android.support.v7.widget.CardView>

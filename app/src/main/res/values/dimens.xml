@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="menu_button_padding">50dp</dimen>
+    <dimen name="height_button">60dp</dimen>
+    <dimen name="menu_button_margin_bottom">5dp</dimen>
+    <dimen name="peticion_express_padding">16dp</dimen>
+    <dimen name="ventanas_padding">16dp</dimen>
+    <dimen name="ventanas_padding_secundario">16dp</dimen>
+    <dimen name="peticion_express_padding_horizontal">16dp</dimen>
+    <dimen name="cardview_vehiculo_width">65dp</dimen>
+    <dimen name="cardview_vehiculo_height">65dp</dimen>
+    <dimen name="cardview_vehiculo_elevation">6dp</dimen>
+    <dimen name="cardview_vehiculo_img_padding">10dp</dimen>
+    <dimen name="cardview_vehiculo_margin_right">4dp</dimen>
+    <dimen name="title_margin_bottom">10dp</dimen>
+    <dimen name="cardview_txt_size">12sp</dimen>
+    <dimen name="titulo_txt_size">30sp</dimen>
+    <dimen name="cardview_servicio_margin">3dp</dimen>
+    <dimen name="txt_size_primario">15sp</dimen>
+    <dimen name="caracteristicas_servicios_size">10sp</dimen>
+    <dimen name="txt_size_secundario">12sp</dimen>
+    <dimen name="cardview_servicio_size">50dp</dimen>
+    <dimen name="cardview_servicios_padding">4dp</dimen>
+    <dimen name="cardview_divide_margin">3dp</dimen>
+    <dimen name="monto_total_margin_bottom">16dp</dimen>
+    <dimen name="radio_button_margin">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="txt_size_extras">14sp</dimen>
+
+</resources>

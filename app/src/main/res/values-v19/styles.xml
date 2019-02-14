@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="pantalla_menu_principal" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/Klavado</item>
+        <item name="colorPrimaryDark">@color/Klavado</item>
+        <item name="colorAccent">@color/Klavado</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

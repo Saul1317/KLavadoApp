@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="300dp"
+    cardview:cardBackgroundColor="@android:color/white"
+    cardview:cardCornerRadius="16dp"
+    cardview:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/router"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/diaglo_advertencia_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Algo Salio mal..."
+            android:textSize="@dimen/txt_size_primario"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/diaglo_advertencia_contenido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Al parecer hubo un problema al consultar los datos"
+            android:textSize="@dimen/txt_size_secundario"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/diaglo_advertencia_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="35dp"
+            android:text="Intentar de nuevo"
+            android:textSize="@dimen/txt_size_secundario"
+            android:textColor="@android:color/white"
+            android:background="@drawable/dialog_button_advertencia"
+            android:theme="@style/dialog_advertencia_boton"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
