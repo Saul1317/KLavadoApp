@@ -2,214 +2,192 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contraintlayout_servicio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_animation"
     tools:context=".TipoServicio.View.TipoServicio">
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <FrameLayout
+        tools:ignore="MissingConstraints">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/Klavado">
-            <ImageView
-                android:id="@+id/btn_back_tipo_servicio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_keyboard_arrow_left"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/lavado911"/>
-        </FrameLayout>
-        <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:paddingTop="16dp"
-           android:paddingBottom="16dp"
-           android:paddingLeft="40dp"
-           android:paddingRight="40dp"
-           android:orientation="vertical">
-           <TextView
-               android:id="@+id/titulo1"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Que hacemos"
-               android:textSize="35sp"
-               android:textColor="@color/primary_text"
-               android:textStyle="bold"/>
-
-           <TextView
-               android:id="@+id/titulo2"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_gravity="end"
-               android:text="por tu auto..."
-               android:textSize="30dp"
-               android:textColor="@color/Klavado"
-               android:textStyle="bold"/>
-       </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/cardview_tipo_servicio_limpieza"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="#01AEEE"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="8dp">
-                <FrameLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="5dp"
-                        android:src="@drawable/agua_blanca"/>
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/logo_lavado911"
+                        android:layout_marginBottom="16dp"/>
 
-                    <LinearLayout
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardview_tipo_servicio_limpieza"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/ventanas_padding"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lo bañamos"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold"
-                            android:textSize="22sp"
-                            android:layout_gravity="center_horizontal"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Lavado con Shampoo 3 ceras"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/txt_size_primario"/>
-
-                    </LinearLayout>
-                </FrameLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardview_tipo_servicio_mantenimiento"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="#8D6E63"
-                app:cardElevation="8dp">
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|end"
-                        android:layout_margin="5dp"
-                        android:src="@drawable/llave_blanca" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/ventanas_padding"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lo cuidamos"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold"
-                            android:textSize="22sp"
-                            android:layout_gravity="center_horizontal"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Cambios de aceites"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/txt_size_primario"/>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardview_tipo_servicio_soporte"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="5dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="8dp"
-                app:cardBackgroundColor="#4CAF50">
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/gloves"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/ventanas_padding"
-                        android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lo enchulamos"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="22sp"
-                        android:layout_gravity="center_horizontal"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="90dp"
                         android:layout_gravity="center"
-                        android:text="Detallado profesional"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/txt_size_primario"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardBackgroundColor="#01AEEE"
+                        app:cardCornerRadius="10dp">
 
-                    </LinearLayout>
-                </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/agua_blanca"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/ventanas_padding"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lo bañamos"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Lavado con Shampoo 3 ceras"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/txt_size_primario"/>
+
+                            </LinearLayout>
+                        </FrameLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardview_tipo_servicio_mantenimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="#8D6E63">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_gravity="center_vertical|end"
+                                android:src="@drawable/llave_blanca" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/ventanas_padding"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lo cuidamos"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Cambios de aceites"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/txt_size_primario"/>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardview_tipo_servicio_soporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="#4CAF50">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/gloves"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/ventanas_padding"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lo enchulamos"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Detallado profesional"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/txt_size_primario"/>
+
+                            </LinearLayout>
+                        </FrameLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
             </android.support.v7.widget.CardView>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

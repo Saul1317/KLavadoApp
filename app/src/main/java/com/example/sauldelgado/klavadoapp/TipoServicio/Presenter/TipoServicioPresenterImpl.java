@@ -25,16 +25,6 @@ public class TipoServicioPresenterImpl implements TipoServicioPresenter {
     }
 
     @Override
-    public void EjecutarAnimacionTitulo1() {
-        tipoServicio.EjecutarAnimacionTitulo1();
-    }
-
-    @Override
-    public void EjecutarAnimacionTitulo2() {
-        tipoServicio.EjecutarAnimacionTitulo2();
-    }
-
-    @Override
     public void EjecutarAnimacionCardviewLimpieza() {
         tipoServicio.EjecutarAnimacionCardviewLimpieza();
     }

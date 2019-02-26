@@ -13,13 +13,11 @@ public interface UbicacionView {
     void buscadorVacio();
     void abrirSiguienteActivity();
     void insertErrorSQL();
-
     void showProgressBar();
     void hideProgressBar();
     void bloquearBotones();
     void desbloquearBotones();
     void limpiarTxtDireccion();
     void limpiarBuscador();
-
     void regresarActivity();
 }

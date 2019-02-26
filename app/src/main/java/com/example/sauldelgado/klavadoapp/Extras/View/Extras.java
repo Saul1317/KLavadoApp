@@ -3,7 +3,11 @@ package com.example.sauldelgado.klavadoapp.Extras.View;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +16,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -33,15 +38,14 @@ import com.example.sauldelgado.klavadoapp.Cita.View.Cita;
 import com.example.sauldelgado.klavadoapp.Data.Local.Sqlite.ConexionSQLite;
 import com.example.sauldelgado.klavadoapp.Data.Local.Sqlite.SQLiteTablas;
 import com.example.sauldelgado.klavadoapp.Data.Local.SharedPreference.MetodosSharedPreference;
-import com.example.sauldelgado.klavadoapp.Services.View.Servicio;
 
 import java.util.List;
 
 public class Extras extends AppCompatActivity implements ExtrasView, View.OnClickListener {
 
-    TextView txt_total_price, txt_precio_original, txt_nombre_cardview_oferta_semana, txt_precio_final_cardview_oferta_semana, txt_porcentaje_descuento_cardview_oferta_semana, titulo1_extras, titulo2_extras;
+    TextView txt_total_price, txt_precio_original, txt_nombre_cardview_oferta_semana, txt_precio_final_cardview_oferta_semana, txt_porcentaje_descuento_cardview_oferta_semana;
     CheckBox checkbox_cardview_oferta_semana;
-    ImageView btn_back_extras;
+    //ImageView btn_back_extras;
     CardView cardview_oferta_semanal;
     Animation tarjeta_oferta_semanal_animation, tarjeta_animation_izq, tarjeta_animation_der;
     Button button_extras_continuar;
@@ -50,6 +54,10 @@ public class Extras extends AppCompatActivity implements ExtrasView, View.OnClic
     private ExtrasPresenter extrasPresenter;
     private ProgressBar progressbar_extra;
     private ConexionSQLite conn;
+
+
+    ConstraintLayout contraintlayout_extra;
+    AnimationDrawable animationDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +68,29 @@ public class Extras extends AppCompatActivity implements ExtrasView, View.OnClic
 
     @Override
     public void LoadView() {
+
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            MenuPrincipal.setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
+        }
+
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            MenuPrincipal.setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+
         conn = new ConexionSQLite(this, "bd_producto", null, SQLiteTablas.VERSION_BD);
         sharedPreferences = getSharedPreferences("klavado", Context.MODE_PRIVATE);
         extrasPresenter = new ExtrasPresenterImpl(this);
+
+        contraintlayout_extra = (ConstraintLayout) findViewById(R.id.contraintlayout_extra);
+        animationDrawable = (AnimationDrawable) contraintlayout_extra.getBackground();
+        animationDrawable.setEnterFadeDuration(7000);
+        animationDrawable.setExitFadeDuration(7000);
+        animationDrawable.start();
 
         recycler_extras = (RecyclerView) findViewById(R.id.recycler_extras);
         LinearLayoutManager linearLayoutManagerExtras = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -83,21 +111,20 @@ public class Extras extends AppCompatActivity implements ExtrasView, View.OnClic
         checkbox_cardview_oferta_semana = (CheckBox) findViewById(R.id.checkbox_cardview_oferta_semana);
         checkbox_cardview_oferta_semana.setOnClickListener(this);
 
-        btn_back_extras = (ImageView) findViewById(R.id.btn_back_extras);
-        btn_back_extras.setOnClickListener(this);
+        //btn_back_extras = (ImageView) findViewById(R.id.btn_back_extras);
+        //btn_back_extras.setOnClickListener(this);
 
         cardview_oferta_semanal = (CardView) findViewById(R.id.cardview_oferta_semanal);
 
         tarjeta_oferta_semanal_animation = AnimationUtils.loadAnimation(this,R.anim.tarjeta_oferta_semanal);
         txt_porcentaje_descuento_cardview_oferta_semana = (TextView) findViewById(R.id.txt_porcentaje_descuento_cardview_oferta_semana);
 
-        titulo1_extras = (TextView) findViewById(R.id.titulo1_extras);
-        titulo2_extras = (TextView) findViewById(R.id.titulo2_extras);
 
         extrasPresenter.cargarExtras(MetodosSharedPreference.ObtenerTipoVehiculoPref(sharedPreferences));
         extrasPresenter.CargarOfertaSemanal(MetodosSharedPreference.ObtenerTipoVehiculoPref(sharedPreferences));
         extrasPresenter.obtenerPreciototal(conn);
-        extrasPresenter.CargarAnimacionTitulo();
+
+
 
     }
 
@@ -238,14 +265,11 @@ public class Extras extends AppCompatActivity implements ExtrasView, View.OnClic
 
     @Override
     public void AnimacionTitulo1() {
-        tarjeta_animation_der = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.tipo_servicio_deslizar_der);
-        titulo1_extras.setAnimation(tarjeta_animation_der);
+
     }
 
     @Override
     public void AnimacionTitulo2() {
-        tarjeta_animation_izq = AnimationUtils.loadAnimation(this,R.anim.tipo_servicio_deslizar_izq);
-        titulo2_extras.setAnimation(tarjeta_animation_izq);
     }
 
     @Override
@@ -256,9 +280,9 @@ public class Extras extends AppCompatActivity implements ExtrasView, View.OnClic
                 extrasPresenter.CargarCitas();
                 break;
 
-            case R.id.btn_back_extras:
+            /*case R.id.btn_back_extras:
                 extrasPresenter.RegresarActivity();
-                break;
+                break;*/
 
             case R.id.checkbox_cardview_oferta_semana:
                 if (checkbox_cardview_oferta_semana.isChecked()){

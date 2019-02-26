@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.sauldelgado.klavadoapp.R;
@@ -61,7 +62,7 @@ public class AdapterRecyclerviewLavado extends RecyclerView.Adapter<AdapterRecyc
     }
 
     public class DetallesServicioPremiumAdapterRecyclerHolder extends RecyclerView.ViewHolder{
-        private CardView cardview_detalle_entrega_hidrolavado;
+        private FrameLayout cardview_detalle_entrega_hidrolavado;
         private TextView txt_titulo_servicio_hidrolavado;
         private TextView txt_caracteristicas_hidrolavado;
         private TextView txt_costo_servicio_hidrolavado;
@@ -71,7 +72,7 @@ public class AdapterRecyclerviewLavado extends RecyclerView.Adapter<AdapterRecyc
             txt_titulo_servicio_hidrolavado = (TextView) itemView.findViewById(R.id.txt_titulo_servicio_hidrolavado);
             txt_caracteristicas_hidrolavado = (TextView) itemView.findViewById(R.id.txt_caracteristicas_hidrolavado);
             txt_costo_servicio_hidrolavado = (TextView) itemView.findViewById(R.id.txt_costo_servicio_hidrolavado);
-            cardview_detalle_entrega_hidrolavado = (CardView) itemView.findViewById(R.id.cardview_detalle_entrega_hidrolavado);
+            cardview_detalle_entrega_hidrolavado = (FrameLayout) itemView.findViewById(R.id.cardview_detalle_entrega_hidrolavado);
         }
     }
 }

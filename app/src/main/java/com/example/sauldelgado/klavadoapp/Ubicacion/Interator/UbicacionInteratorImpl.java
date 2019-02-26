@@ -36,8 +36,10 @@ public class UbicacionInteratorImpl implements  UbicacionInterator {
             @Override
             public void onLocationChanged(Location location) {
                 if(location != null){
+                    Log.e("LOCATION", "localizacion obtenida");
                     onUbicacionInteratorFinish.setLocacionActual(location);
                 }else{
+                    Log.e("LOCATION", "localizacion fallida");
                     onUbicacionInteratorFinish.setLocacionActualError();
                 }
             }

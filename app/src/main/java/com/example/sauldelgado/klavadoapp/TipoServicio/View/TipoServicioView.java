@@ -6,8 +6,6 @@ public interface TipoServicioView {
     void CargarMenuPrincipal();
     void CargarServicioMantenimiento();
 
-    void EjecutarAnimacionTitulo1();
-    void EjecutarAnimacionTitulo2();
     void EjecutarAnimacionCardviewLimpieza();
     void EjecutarAnimacionCardviewMantenimiento();
     void EjecutarAnimacionCardviewDetallado();

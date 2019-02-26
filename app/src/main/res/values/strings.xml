@@ -27,7 +27,7 @@
     <string name="txt_numero_calle">#</string>
     <string name="txt_hint_celular">Ingresa tu celular*</string>
     <string name="txt_comentario">¿Cómo identificamos tu auto?</string>
-    <string name="txt_monto_total">Monto total</string>
+    <string name="txt_monto_total">Costo del servicio</string>
     <string name="txt_monto_total_prueba">$100</string>
     <string name="txt_tarjeta">Tarjeta</string>
     <string name="txt_efectivo">Efectivo</string>
@@ -38,7 +38,8 @@
     <string name="txt_hint_hora_inicio">Ingresa una hora de inicio</string>
     <string name="txt_hint_hora_final">Ingresa una hora final</string>
     <string name="txt_hora">Hora</string>
-    <string name="txt_descripcion_efectivo">Este es un texto de prueba para que los usuarios sepan que si se puede hacer pagos en efectivo pero que deben estar concientes de que si no se paga primero no se realizara ningun trabajo</string>
+    <string name="txt_descripcion_efectivo">Para realizar el lavado del vehículo primero se deberá pagar el servicio de lo contrario no se comenzara el trabajo y se cancelara el servicio de lavado.</string>
+    <string name="txt_descripcion_efectivo2">Importante mencionar que en caso de que el usuario no se encuentre el servicio se cancelara.</string>
     <string name="txt_hint_tarjeta_credito">Número de tu tarjeta</string>
     <string name="txt_hint_nombre_apellido">Ingresa tu nombre y apellido</string>
     <string name="txt_fecha_vencimiento">Fecha de vencimiento</string>

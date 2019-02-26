@@ -5,49 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TipoLavado.View.Activity.TipoLavado">
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/fragment_tipo_lavado"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_tipo_lavado"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </FrameLayout>
+        </android.support.v4.view.ViewPager>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_tipo_lavado"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:orientation="horizontal">
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/light_text"
+            app:tabIndicatorColor="@android:color/white"/>
 
-            <TextView
-                android:id="@+id/txt_ecologia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:text="Ecologico"
-                android:textColor="@color/primary_text"
-                android:textStyle="bold"
-                android:textSize="@dimen/txt_size_primario"/>
-
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/switch_tipo_lavado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:theme="@style/switch_tipo_lavado"/>
-
-            <TextView
-                android:id="@+id/txt_premium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Premium"
-                android:textColor="@color/primary_text"
-                android:textStyle="bold"
-                android:textSize="@dimen/txt_size_primario"/>
-
-        </LinearLayout>
     </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

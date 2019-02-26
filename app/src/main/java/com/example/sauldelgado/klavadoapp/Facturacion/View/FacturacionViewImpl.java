@@ -3,7 +3,9 @@ package com.example.sauldelgado.klavadoapp.Facturacion.View;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -37,19 +39,30 @@ public class FacturacionViewImpl extends AppCompatActivity implements Facturacio
     private FacturacionPresenter facturacionPresenter;
     private ConexionSQLite conn;
     private AppCompatSpinner spinner_cfdi;
-    private ImageView btn_back_facturacion;
+    //private ImageView btn_back_facturacion;
+
+    ConstraintLayout contraintlayout_facturacion;
+    AnimationDrawable animationDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facturacion_view_impl);
+
         facturacionPresenter = new FacturaPresenterImpl(this);
         conn = new ConexionSQLite(this, "bd_producto", null, SQLiteTablas.VERSION_BD);
+
+        contraintlayout_facturacion = (ConstraintLayout) findViewById(R.id.contraintlayout_facturacion);
+        animationDrawable = (AnimationDrawable) contraintlayout_facturacion.getBackground();
+        animationDrawable.setEnterFadeDuration(7000);
+        animationDrawable.setExitFadeDuration(7000);
+        animationDrawable.start();
 
         txt_rfc_factura = (TextInputEditText) findViewById(R.id.txt_rfc_factura);
         txt_razon_social_factura = (TextInputEditText) findViewById(R.id.txt_razon_social_factura);
 
-        btn_back_facturacion = (ImageView) findViewById(R.id.btn_back_facturacion);
+        //btn_back_facturacion = (ImageView) findViewById(R.id.btn_back_facturacion);
+        //btn_back_facturacion.setOnClickListener(this);
 
         edt_correo_usuario = (TextInputEditText) findViewById(R.id.edt_correo_usuario);
 
@@ -78,11 +91,6 @@ public class FacturacionViewImpl extends AppCompatActivity implements Facturacio
                         txt_razon_social_factura.getText().toString(),
                         spinner_cfdi.getSelectedItem().toString(),
                         edt_correo_usuario.getText().toString());
-                break;
-
-            case R.id.btn_back_facturacion:
-                onBackPressed();
-
                 break;
             default:
                 break;
@@ -118,9 +126,10 @@ public class FacturacionViewImpl extends AppCompatActivity implements Facturacio
 
     @Override
     public void abrirSiguienteActivity() {
-        Intent intent = new Intent(FacturacionViewImpl.this, Pago.class);
+        onBackPressed();
+        /*Intent intent = new Intent(FacturacionViewImpl.this, Pago.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     @Override
@@ -135,11 +144,17 @@ public class FacturacionViewImpl extends AppCompatActivity implements Facturacio
 
     @Override
     public void RFCvacio() {
-        edt_correo_usuario.setError("Campo Obligatorio");
+        txt_rfc_factura.setError("Campo Obligatorio");
     }
 
     @Override
     public void RazonSocialVacio() {
         txt_razon_social_factura.setError("Campo Obligatorio");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
     }
 }

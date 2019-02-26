@@ -2,16 +2,20 @@ package com.example.sauldelgado.klavadoapp.Cita.View;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -20,7 +24,7 @@ import android.widget.Toast;
 import com.example.sauldelgado.klavadoapp.Cita.Presenter.CitaPresenter;
 import com.example.sauldelgado.klavadoapp.Cita.Presenter.CitaPresenterImpl;
 import com.example.sauldelgado.klavadoapp.CostosLavados.View.CostoLavado;
-import com.example.sauldelgado.klavadoapp.DatosPersonales.View.DatosPersonales;
+import com.example.sauldelgado.klavadoapp.Menu.View.MenuPrincipal;
 import com.example.sauldelgado.klavadoapp.R;
 import com.example.sauldelgado.klavadoapp.Data.Local.Sqlite.ConexionSQLite;
 import com.example.sauldelgado.klavadoapp.Data.Local.Sqlite.SQLiteTablas;
@@ -36,7 +40,7 @@ public class Cita extends AppCompatActivity implements CitaView, View.OnClickLis
     private TextInputEditText edt_fecha, edt_comentario_usuario;
     private Button button_programacion_continuar;
     private Spinner spinner_horario_disponible;
-    private ImageView btn_back_programacion;
+    //private ImageView btn_back_programacion;
     private ProgressBar progressbar_programacion;
 
     private static final String CERO = "0";
@@ -50,6 +54,9 @@ public class Cita extends AppCompatActivity implements CitaView, View.OnClickLis
     private ConexionSQLite conn;
     CitaPresenter citaPresenter;
 
+    ConstraintLayout constraintLayout_cita;
+    AnimationDrawable animationDrawable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,9 +66,29 @@ public class Cita extends AppCompatActivity implements CitaView, View.OnClickLis
 
     @Override
     public void CargarView() {
+
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            MenuPrincipal.setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
+        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+        //make fully Android Transparent Status bar
+        if (Build.VERSION.SDK_INT >= 21) {
+            MenuPrincipal.setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+
         citaPresenter = new CitaPresenterImpl(this);
         conn = new ConexionSQLite(this, "bd_producto", null, SQLiteTablas.VERSION_BD);
+
         progressbar_programacion = (ProgressBar) findViewById(R.id.progressbar_programacion);
+
+        constraintLayout_cita = (ConstraintLayout) findViewById(R.id.constraintLayout_cita);
+        animationDrawable = (AnimationDrawable) constraintLayout_cita.getBackground();
+        animationDrawable.setEnterFadeDuration(7000);
+        animationDrawable.setExitFadeDuration(7000);
+        animationDrawable.start();
 
         edt_fecha = (TextInputEditText) findViewById(R.id.edt_fecha);
         edt_fecha.setOnClickListener(this);
@@ -74,8 +101,8 @@ public class Cita extends AppCompatActivity implements CitaView, View.OnClickLis
 
         spinner_horario_disponible = (Spinner) findViewById(R.id.spinner_horario_disponible);
 
-        btn_back_programacion = (ImageView) findViewById(R.id.btn_back_programacion);
-        btn_back_programacion.setOnClickListener(this);
+        //btn_back_programacion = (ImageView) findViewById(R.id.btn_back_programacion);
+        //btn_back_programacion.setOnClickListener(this);
 
         citaPresenter.ConsultarHorariosDisponibles(formatoBD.format(c.getTime()));
     }
@@ -205,9 +232,9 @@ public class Cita extends AppCompatActivity implements CitaView, View.OnClickLis
                 citaPresenter.agregarDatosPersonales(conn, edt_fecha.getText().toString(), spinner_horario_disponible.getSelectedItem().toString(), edt_comentario_usuario.getText().toString());
                 break;
 
-            case R.id.btn_back_programacion:
+            /*case R.id.btn_back_programacion:
                 citaPresenter.RegresarActivity();
-                break;
+                break;*/
 
             default:
                 Toast.makeText(this, "Ocurrió un error", Toast.LENGTH_SHORT).show();

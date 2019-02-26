@@ -5,4 +5,5 @@ public interface TipoLavadoView {
     void abrirLavadoPremium();
     void cambiarColorEcologico();
     void cambiarColorPremium();
+    void SacarTipoLavado();
 }

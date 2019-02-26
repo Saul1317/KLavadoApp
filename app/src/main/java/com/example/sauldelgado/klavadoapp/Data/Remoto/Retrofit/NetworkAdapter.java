@@ -12,7 +12,7 @@ public class NetworkAdapter {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.7.156:80/Klavado/").addConverterFactory(GsonConverterFactory.create(gson)).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.7.181:80/Klavado/").addConverterFactory(GsonConverterFactory.create(gson)).build();
         API_SERVICE = retrofit.create(NetworkService.class);
         return API_SERVICE;
     }

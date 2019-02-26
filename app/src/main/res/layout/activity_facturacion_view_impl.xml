@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contraintlayout_facturacion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_app"
+    android:background="@drawable/menu_animation"
     tools:context=".Facturacion.View.FacturacionViewImpl">
     <ScrollView
         android:layout_width="match_parent"
@@ -13,23 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="vertical">
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Klavado">
-                <ImageView
-                    android:id="@+id/btn_back_facturacion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/ic_keyboard_arrow_left"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/lavado911"/>
-            </FrameLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -42,37 +28,18 @@
                 <android.support.v7.widget.GridLayout
                     android:id="@+id/formulario_facturacion"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:visibility="visible"
                     app:columnCount="1"
                     app:useDefaultMargins="true">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/titulo1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ingresa tus "
-                            android:textSize="30sp"
-                            android:textColor="@color/primary_text"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:id="@+id/titulo2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:text="Datos de facturación"
-                            android:textSize="25dp"
-                            android:textColor="@color/Klavado"
-                            android:textStyle="bold"/>
-
-                    </LinearLayout>
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/logo_lavado911"
+                        app:layout_gravity="center_horizontal"
+                        app:layout_columnSpan="1"/>
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_height="wrap_content"
@@ -125,7 +92,6 @@
                 </android.support.v7.widget.GridLayout>
 
             </android.support.v7.widget.CardView>
-
             <Button
                 android:id="@+id/button_factura_continuar"
                 android:layout_width="match_parent"

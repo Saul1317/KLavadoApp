@@ -4,10 +4,11 @@ package com.example.sauldelgado.klavadoapp.TipoLavado.View.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,7 +31,6 @@ import com.example.sauldelgado.klavadoapp.TipoLavado.Presenter.Fragment.LavadoPr
 import com.example.sauldelgado.klavadoapp.TipoLavado.Presenter.Fragment.LavadoPremiumFragmentPresenterImpl;
 
 import java.util.List;
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -44,7 +44,11 @@ public class LavadoPremiumFragmentImpl extends Fragment implements LavadoPremium
     private SharedPreferences sharedPreferences;
     AlertDialog alertDialogConfirmacion;
 
+    ConstraintLayout constraintLayout_premium;
+    AnimationDrawable animationDrawable;
+
     public LavadoPremiumFragmentImpl() {
+
     }
 
     @Override
@@ -54,8 +58,16 @@ public class LavadoPremiumFragmentImpl extends Fragment implements LavadoPremium
         progress_bar_premium = (ProgressBar) view.findViewById(R.id.progress_bar_premium);
         conn = new ConexionSQLite(getContext(), "bd_producto", null, SQLiteTablas.VERSION_BD);
         sharedPreferences = getActivity().getSharedPreferences("klavado", Context.MODE_PRIVATE);
+
+        /*constraintLayout_premium = (ConstraintLayout) view.findViewById(R.id.constraintLayout_premium);
+        animationDrawable = (AnimationDrawable) constraintLayout_premium.getBackground();
+        animationDrawable.setEnterFadeDuration(5000);
+        animationDrawable.setExitFadeDuration(5000);
+        animationDrawable.start();*/
+
         recyclerview_lavado_premium = (RecyclerView) view.findViewById(R.id.recyclerview_lavado_premium);
-        recyclerview_lavado_premium.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        LinearLayoutManager linearLayoutManagerExtras = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        recyclerview_lavado_premium.setLayoutManager(linearLayoutManagerExtras);
         lavadoPremiumFragmentPresenter.getlavadosPremium(MetodosSharedPreference.ObtenerTipoVehiculoPref(sharedPreferences));
         return view;
     }

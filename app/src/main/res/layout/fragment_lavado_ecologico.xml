@@ -1,67 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lavado_ecologico">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fondo_lavado_ecologico">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:padding="30dp"
-            android:src="@drawable/icono_911_aplicacion"/>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:padding="32dp"
+            android:background="@drawable/cardview_ecologico"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="20dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/titulo1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lavado"
-                    android:textSize="40sp"
-                    android:textColor="@color/primary_text"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:id="@+id/titulo2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:text="Ecologico"
-                    android:textSize="45dp"
-                    android:textColor="@color/Klavado_ecologico"
-                    android:textStyle="bold"/>
-            </LinearLayout>
+                android:layout_gravity="center"
+                android:text="LAVADO ECOLOGICO"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="25sp"
+                android:layout_marginBottom="16dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="@string/txt_ecologia_descripcion"
                 android:textStyle="normal"
                 android:textColor="@color/secondary_text"
-                android:textSize="@dimen/txt_size_primario"
+                android:textSize="@dimen/txt_size_secundario"
                 android:layout_marginBottom="16dp"/>
 
             <ProgressBar
                 android:id="@+id/progress_bar_ecologico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="20dp"
@@ -71,11 +54,12 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerview_lavado_ecologico"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
 
-    </FrameLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

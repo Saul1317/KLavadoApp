@@ -124,8 +124,14 @@ public class TarjetaCreditoFragment extends Fragment implements TarjetaCreditoVi
         img_agregar_factura = (ImageView) view.findViewById(R.id.img_agregar_factura);
         txt_agregar_factura = (TextView) view.findViewById(R.id.txt_agregar_factura);
 
-        pagoPresenter.validarFacturacion(conn);
+
         return  view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        pagoPresenter.validarFacturacion(conn);
     }
 
     @Override

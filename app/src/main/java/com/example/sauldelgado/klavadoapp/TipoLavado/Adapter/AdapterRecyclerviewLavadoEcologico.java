@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.sauldelgado.klavadoapp.R;
@@ -60,7 +61,7 @@ public class AdapterRecyclerviewLavadoEcologico extends RecyclerView.Adapter<Ada
     }
 
     public class DetallesServicioEcologicoAdapterRecyclerHolder extends RecyclerView.ViewHolder{
-        private CardView cardview_detalle_entrega_ecologico;
+        private FrameLayout cardview_detalle_entrega_ecologico;
         private TextView txt_titulo_servicio;
         private TextView txt_caracteristicas;
         private TextView txt_costo_servicio;
@@ -70,7 +71,7 @@ public class AdapterRecyclerviewLavadoEcologico extends RecyclerView.Adapter<Ada
             txt_titulo_servicio = (TextView) itemView.findViewById(R.id.txt_titulo_servicio);
             txt_caracteristicas = (TextView) itemView.findViewById(R.id.txt_caracteristicas);
             txt_costo_servicio = (TextView) itemView.findViewById(R.id.txt_costo_servicio);
-            cardview_detalle_entrega_ecologico = (CardView) itemView.findViewById(R.id.cardview_detalle_entrega_ecologico);
+            cardview_detalle_entrega_ecologico = (FrameLayout) itemView.findViewById(R.id.cardview_detalle_entrega_ecologico);
         }
     }
 }

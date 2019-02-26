@@ -1,12 +1,19 @@
 package com.example.sauldelgado.klavadoapp.TipoServicio.View;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.Image;
+import android.os.Build;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -23,11 +30,11 @@ import com.example.sauldelgado.klavadoapp.TipoVehiculo.View.TipoVehiculo;
 
 public class TipoServicio extends AppCompatActivity implements TipoServicioView , View.OnClickListener {
 
-    TextView titulo1, titulo2;
     private CardView cardview_tipo_servicio_limpieza, cardview_tipo_servicio_mantenimiento, cardview_tipo_servicio_soporte;
     private TipoServicioPresenter tipoServicioPresenter;
-    private ImageView btn_back_tipo_servicio;
     Animation tarjeta_animation_izq, tarjeta_animation_der;
+    ConstraintLayout contraintlayout_servicio;
+    AnimationDrawable animationDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +43,28 @@ public class TipoServicio extends AppCompatActivity implements TipoServicioView 
         LoadView();
     }
 
+
     @Override
     public void LoadView() {
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            MenuPrincipal.setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
+        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+        //make fully Android Transparent Status bar
+        if (Build.VERSION.SDK_INT >= 21) {
+            MenuPrincipal.setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+
         tipoServicioPresenter = new TipoServicioPresenterImpl(this);
 
-        btn_back_tipo_servicio = (ImageView) findViewById(R.id.btn_back_tipo_servicio);
-        btn_back_tipo_servicio.setOnClickListener(this);
+        contraintlayout_servicio = (ConstraintLayout) findViewById(R.id.contraintlayout_servicio);
+        animationDrawable = (AnimationDrawable) contraintlayout_servicio.getBackground();
+        animationDrawable.setEnterFadeDuration(7000);
+        animationDrawable.setExitFadeDuration(7000);
+        animationDrawable.start();
 
         cardview_tipo_servicio_limpieza = (CardView) findViewById(R.id.cardview_tipo_servicio_limpieza);
         cardview_tipo_servicio_limpieza.setOnClickListener(this);
@@ -52,11 +75,6 @@ public class TipoServicio extends AppCompatActivity implements TipoServicioView 
         cardview_tipo_servicio_soporte = (CardView) findViewById(R.id.cardview_tipo_servicio_soporte);
         cardview_tipo_servicio_soporte.setOnClickListener(this);
 
-        titulo1 = (TextView) findViewById(R.id.titulo1);
-        titulo2 = (TextView) findViewById(R.id.titulo2);
-
-        tipoServicioPresenter.EjecutarAnimacionTitulo1();
-        tipoServicioPresenter.EjecutarAnimacionTitulo2();
         tipoServicioPresenter.EjecutarAnimacionCardviewLimpieza();
         tipoServicioPresenter.EjecutarAnimacionCardviewMantenimiento();
         tipoServicioPresenter.EjecutarAnimacionCardviewDetallado();
@@ -76,18 +94,6 @@ public class TipoServicio extends AppCompatActivity implements TipoServicioView 
     @Override
     public void CargarServicioMantenimiento() {
         Toast.makeText(this, "Mantenimiento", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void EjecutarAnimacionTitulo1() {
-        tarjeta_animation_der = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.tipo_servicio_deslizar_der);
-        titulo1.setAnimation(tarjeta_animation_der);
-    }
-
-    @Override
-    public void EjecutarAnimacionTitulo2() {
-        tarjeta_animation_izq = AnimationUtils.loadAnimation(this,R.anim.tipo_servicio_deslizar_izq);
-        titulo2.setAnimation(tarjeta_animation_izq);
     }
 
     @Override
@@ -120,10 +126,6 @@ public class TipoServicio extends AppCompatActivity implements TipoServicioView 
                 break;
 
             case R.id.cardview_tipo_servicio_soporte:
-                break;
-
-            case R.id.btn_back_tipo_servicio:
-                tipoServicioPresenter.CargarMenuPrincipal();
                 break;
 
             default:

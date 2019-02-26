@@ -22,17 +22,6 @@ public class TipoVehiculoPresenterImpl implements TipoVehiculoPresenter, OnTipoV
     }
 
     @Override
-    public void CargarAnimacionTitulo() {
-        tipoVehiculoView.AnimacionTitulo1();
-        tipoVehiculoView.AnimacionTitulo2();
-    }
-
-    @Override
-    public void ActivityBack() {
-        tipoVehiculoView.ActivityBack();
-    }
-
-    @Override
     public void CargarServiciosDisponibles() {
         tipoVehiculoView.AbrirServicios();
     }

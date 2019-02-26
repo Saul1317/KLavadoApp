@@ -41,6 +41,7 @@
             android:name=".Facturacion.View.FacturacionViewImpl"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
         <activity
             android:name=".Splash.View.SplashActivity"
             android:screenOrientation="portrait"
@@ -51,49 +52,53 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Menu.View.MenuPrincipal"
             android:theme="@style/pantalla_menu_principal"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
         <activity
             android:name=".Services.View.Servicio"
             android:theme="@style/pantalla_completa" />
+
         <activity
             android:name=".Extras.View.Extras"
-            android:theme="@style/pantalla_completa"
+            android:theme="@style/pantalla_menu_principal"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".Cita.View.Cita"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_menu_principal"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
         <activity
             android:name=".DatosPersonales.View.DatosPersonales"
             android:theme="@style/pantalla_completa"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+
         <activity
             android:name=".Pago.View.Activity.Pago"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+            android:theme="@style/pantalla_menu_principal"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
         <activity
             android:name=".Finalizado.View.FinalizacionServicio"
             android:theme="@style/pantalla_completa" />
+
         <activity
             android:name=".Registrar.View.Registrarse"
             android:label="@string/title_activity_registrarse"
             android:theme="@style/pantalla_completa" />
+
         <activity
             android:name=".TipoServicio.View.TipoServicio"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_menu_principal" />
+
         <activity
             android:name=".TipoVehiculo.View.TipoVehiculo"
-            android:theme="@style/pantalla_completa" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
+            android:theme="@style/pantalla_menu_principal" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -101,18 +106,23 @@
         <activity
             android:name=".Ubicacion.View.Ubicacion"
             android:label="@string/app_name"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Terminos.View.Terminos"
             android:theme="@style/pantalla_completa" />
+
         <activity android:name=".Paypal.View.PaypalExpress" />
+
         <activity
             android:name=".TipoLavado.View.Activity.TipoLavado"
             android:label="@string/title_activity_tipo_lavado"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_menu_principal" />
+
         <activity
             android:name=".CostosLavados.View.CostoLavado"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".LugaresDisponible.View.LugaresDisponibles"
             android:theme="@style/pantalla_completa" />

@@ -58,7 +58,8 @@ public class LavadoEcologicoFragmentImpl extends Fragment implements LavadoEcolo
         conn = new ConexionSQLite(getContext(), "bd_producto", null, SQLiteTablas.VERSION_BD);
         sharedPreferences = getActivity().getSharedPreferences("klavado", Context.MODE_PRIVATE);
         recyclerview_lavado_ecologico = (RecyclerView) view.findViewById(R.id.recyclerview_lavado_ecologico);
-        recyclerview_lavado_ecologico.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        LinearLayoutManager linearLayoutManagerExtras = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        recyclerview_lavado_ecologico.setLayoutManager(linearLayoutManagerExtras);
         lavadoEcologicoFragmentPresenter.getlavadosEcologico(MetodosSharedPreference.ObtenerTipoVehiculoPref(sharedPreferences));
         return view;
     }

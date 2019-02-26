@@ -2,112 +2,100 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout_cita"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_animation"
+    android:fitsSystemWindows="true"
     tools:context=".Cita.View.Cita">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/Klavado">
-            <ImageView
-                android:id="@+id/btn_back_programacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_keyboard_arrow_left"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/lavado911"/>
-        </FrameLayout>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="vertical">
-            <LinearLayout
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/ventanas_padding"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="@string/txt_programacion_descripcion"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="@dimen/txt_size_primario"
-                    android:textStyle="normal" />
-                <LinearLayout
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="#fff"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="10dp">
+
+                <android.support.v7.widget.GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/ventanas_padding"
-                    android:orientation="vertical">
+                    android:layout_margin="16dp"
+                    app:columnCount="2"
+                    app:useDefaultMargins="true">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/logo_lavado911"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:orientation="horizontal">
+                        android:text="@string/txt_programacion_descripcion"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="@dimen/txt_size_primario"
+                        android:textStyle="normal"
+                        app:layout_columnSpan="2"/>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp"
-                            android:contentDescription="@string/txt_calendario"
-                            android:src="@drawable/calendar"/>
-
-                        <android.support.design.widget.TextInputEditText
-                            android:id="@+id/edt_fecha"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:backgroundTint="@color/Klavado"
-                            android:clickable="true"
-                            android:ems="12"
-                            android:focusable="false"
-                            android:hint="@string/txt_hint_fecha"
-                            android:inputType="date"
-                            android:textSize="@dimen/txt_size_primario"
-                            app:layout_columnSpan="2"/>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:orientation="horizontal">
+                        android:contentDescription="@string/txt_calendario"
+                        android:src="@drawable/calendar"
+                        app:layout_gravity="center_vertical"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="1" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp"
-                            android:layout_gravity="center_vertical"
-                            android:contentDescription="@string/txt_hora"
-                            android:src="@drawable/clock_with_white_face"/>
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edt_fecha"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/Klavado"
+                        android:clickable="true"
+                        android:ems="12"
+                        android:focusable="false"
+                        android:hint="@string/txt_hint_fecha"
+                        android:inputType="date"
+                        android:textSize="@dimen/txt_size_primario"
+                        app:layout_columnWeight="8"
+                        app:layout_columnSpan="1" />
 
-                        <android.support.v7.widget.AppCompatSpinner
-                            android:id="@+id/spinner_horario_disponible"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            style="@style/spinner_style">
-                        </android.support.v7.widget.AppCompatSpinner>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/txt_hora"
+                        android:src="@drawable/clock_with_white_face"
+                        app:layout_gravity="center_vertical"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="1"/>
 
-                    </LinearLayout>
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinner_horario_disponible"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        style="@style/spinner_style"
+                        app:layout_columnWeight="8"
+                        app:layout_columnSpan="1">
+                    </android.support.v7.widget.AppCompatSpinner>
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         app:layout_columnSpan="2">
 
@@ -117,37 +105,36 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/txt_comentario"
                             android:inputType="textMultiLine"
-                            android:lines="8"
+                            android:lines="4"
                             android:maxLength="255"
                             android:textSize="@dimen/txt_size_primario"
                             app:backgroundTint="@color/Klavado"/>
                     </android.support.design.widget.TextInputLayout>
 
-                </LinearLayout>
-            </LinearLayout>
-            <FrameLayout
+                </android.support.v7.widget.GridLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/progressbar_programacion"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/button_programacion_continuar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ProgressBar
-                    android:id="@+id/progressbar_programacion"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_gravity="center_horizontal"
-                    android:visibility="gone"/>
-                <Button
-                    android:id="@+id/button_programacion_continuar"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_button"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="16dp"
-                    android:text="@string/txt_continuar"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold"
-                    android:theme="@style/boton_menu_KLavado" />
-            </FrameLayout>
+                android:layout_height="@dimen/height_button"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:text="@string/txt_continuar"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:theme="@style/boton_menu_KLavado" />
+
         </LinearLayout>
-    </LinearLayout>
+
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

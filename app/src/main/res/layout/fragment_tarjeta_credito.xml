@@ -6,10 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pago.View.Fragment.TarjetaCreditoFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical">
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,6 +29,15 @@
                 android:layout_margin="16dp"
                 app:columnCount="2"
                 app:useDefaultMargins="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_lavado911"
+                    android:visibility="gone"
+                    app:layout_gravity="center_horizontal"
+                    app:layout_columnSpan="2"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -182,7 +194,15 @@
                         app:layout_columnSpan="1" />
 
                 </LinearLayout>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_columnSpan="2"
+                    android:text="Facturación no obligatoria"
+                    android:textSize="@dimen/txt_size_secundario"
+                    android:textStyle="italic"
+                    android:textColor="@color/secondary_text"
+                    app:layout_gravity="center"/>
             </android.support.v7.widget.GridLayout>
         </android.support.v7.widget.CardView>
 

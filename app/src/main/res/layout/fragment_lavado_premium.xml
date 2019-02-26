@@ -1,83 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_premium"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <FrameLayout
+    android:layout_height="match_parent"
+    android:background="@drawable/premium_animacion">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fondo_lavado_911_premium_alternativo">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:padding="30dp"
-            android:src="@drawable/icono_911_aplicacion_premium"/>
-
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:orientation="vertical">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/titulo1"
-                    android:layout_width="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:background="@drawable/cardview_premium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lavado"
-                    android:textSize="40sp"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:id="@+id/titulo2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:text="Premium"
-                    android:textSize="45dp"
-                    android:textColor="@color/Klavado_premium"
-                    android:textStyle="bold"/>
-            </LinearLayout>
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/txt_hidrolavado_descripcion"
-                android:textStyle="normal"
-                android:textColor="#EAAF00"
-                android:textSize="@dimen/txt_size_primario"
-                android:layout_marginBottom="16dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/lavadopremium2"
+                        android:layout_marginBottom="16dp"
+                        android:layout_gravity="center_horizontal"/>
 
-            <ProgressBar
-                android:id="@+id/progress_bar_premium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"
-                android:indeterminate="true"
-                android:indeterminateDrawable="@drawable/progress_bar_color"/>
+                    <ProgressBar
+                        android:id="@+id/progress_bar_premium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:indeterminate="true"
+                        android:indeterminateDrawable="@drawable/progress_bar_color"
+                        android:visibility="gone"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerview_lavado_premium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </android.support.v7.widget.RecyclerView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:text="@string/txt_hidrolavado_descripcion"
+                        android:textStyle="normal"
+                        android:textColor="#D7AC4B"
+                        android:textSize="@dimen/txt_size_secundario"
+                        android:layout_marginBottom="16dp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview_lavado_premium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </FrameLayout>
 
         </LinearLayout>
-
-    </FrameLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
